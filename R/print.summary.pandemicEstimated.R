@@ -2,8 +2,8 @@
 #' @rdname summary.pandemicEstimated
 #' @method print summary.pandemicEstimated
 #'
-#' @param x An object of class \code{"summary.pandemicEstimated"}.
-#' @param ... Currently unused.
+#' @param x an object of class \code{"summary.pandemicEstimated"}.
+#' @param ... currently unused.
 #' @importFrom utils head
 #' @importFrom utils tail
 #' @export
@@ -84,14 +84,14 @@ print.summary.pandemicEstimated=function(x,...){
 
   if(x$n_waves==1){              #gen logistic ou gen logistic with seasonal effect
     cat("\nRestrictions:")
-    cat("\n 1: ", "a/b^f","<",x$config.inputs$use_inputs$p,"*population")
+    cat("\n 1: ", "a/b^f","<",x$p,"*population")
     cat("\n 2: ", "f > 1\n")
   }
 
   if(x$n_waves==2){              #multiwaves:  2waves
     cat("\nRestrictions:")
-    cat("\n 1: ", "a_1/b_1","<",x$config.inputs$use_inputs$p,"*population")
-    cat("\n 2: ", "a_2/b_2","<",x$config.inputs$use_inputs$p,"*population\n")
+    cat("\n 1: ", "a_1/b_1","<",x$p,"*population")
+    cat("\n 2: ", "a_2/b_2","<",x$p,"*population\n")
   }
 
 
@@ -99,7 +99,7 @@ print.summary.pandemicEstimated=function(x,...){
   cat("\n------\n")
   cat("*For help interpreting the printed output see ?summary.pandemicEstimated\n")
   cat("*For more information see ?'summary,stanfit-method'\n")
-  cat("*For details on the model, priors and restrictions, see the Details section in ?pandemic_model\n")
+  cat("*For details on the model, priors and restrictions, see ?models\n")
   #cat("**a/b^f represents the assymptote of the cumulative cases curve")
   }
 

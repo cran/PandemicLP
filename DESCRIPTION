@@ -1,8 +1,8 @@
 Package: PandemicLP
 Type: Package
 Title: Long Term Prediction for Epidemic and Pandemic Data
-Version: 0.2.0
-Date: 2020-11-25
+Version: 0.2.1
+Date: 2021-05-08
 Authors@R: c(person("Débora", "de Freitas Magalhães", email = "deborafmag@gmail.com", role = "aut"),
             person("Marta Cristina", "Colozza Bianchi da Costa", email = "marta_bianchi@ufg.br", role = "aut"),
             person("Guido", "Alberti Moreira", email = "guidoalber@gmail.com", role = c("cre","aut"),comment=c(ORCID="0000-0001-7557-0874")),
@@ -32,7 +32,7 @@ VignetteBuilder: knitr
 SystemRequirements: GNU make
 RoxygenNote: 7.1.1
 NeedsCompilation: yes
-Packaged: 2020-11-26 17:13:11 UTC; anthorg
+Packaged: 2021-02-08 23:26:19 UTC; anthorg
 Author: Débora de Freitas Magalhães [aut],
   Marta Cristina Colozza Bianchi da Costa [aut],
   Guido Alberti Moreira [cre, aut]
@@ -40,4 +40,4 @@ Author: Débora de Freitas Magalhães [aut],
   Thais Pacheco Menezes [aut],
   Marcos Oliveira Prates [ctb] (<https://orcid.org/0000-0001-8077-4898>)
 Repository: CRAN
-Date/Publication: 2020-11-30 09:00:11 UTC
+Date/Publication: 2021-02-09 13:00:02 UTC

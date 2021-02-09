@@ -32,12 +32,12 @@
 #'
 #' @method print pandemicEstimated
 #' @templateVar pandemicEstimatedArg x
-#' @param x An object of S3 class \code{\link{pandemicEstimated-objects}}.
-#' @param probs A numeric vector of quantiles of interest. The default is
+#' @param x an object of S3 class \code{\link{pandemicEstimated-objects}}.
+#' @param probs a numeric vector of quantiles of interest. The default is
 #' \code{c(0.025,0.5,0.975)}.
 #' @param digits Number of digits to use for formatting numbers.
 #' @param info TRUE or FALSE: more details for output interpretation. The Default is TRUE.
-#' @param ... Currently unused.
+#' @param ... currently unused.
 #' @return Returns \code{x}, invisibly.
 #' @details
 #'
@@ -156,7 +156,7 @@ print.pandemicEstimated=function(x,digits=3,probs=c(0.025,0.5,0.975),info=TRUE,.
   cat("\n------\n")
   cat("*For help interpreting the printed output see ?print.pandemicEstimated\n")
   cat("*For more information see ?'summary.pandemicEstimated\n")
-  cat("*For details on the model, priors and restrictions, see the Details section in ?pandemic_model\n")
+  cat("*For details on the model, priors and restrictions, see ?models\n")
   #cat("**a/b^f represents the assymptote of the cumulative cases curve")
   }
 

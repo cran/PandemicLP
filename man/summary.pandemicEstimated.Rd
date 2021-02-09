@@ -11,7 +11,7 @@
 \method{summary}{pandemicEstimated}(object, probs = c(0.025, 0.5, 0.975), digits = 3, info = TRUE, ...)
 }
 \arguments{
-\item{x}{An object of class \code{"summary.pandemicEstimated"}.}
+\item{x}{an object of class \code{"summary.pandemicEstimated"}.}
 
 \item{...}{Currently unused.}
 

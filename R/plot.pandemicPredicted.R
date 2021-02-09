@@ -143,13 +143,13 @@ plot.pandemicPredicted <- function(x,y,term = "long",color = TRUE,summary = TRUE
                               showarrow = FALSE))
       }
       } else
-        fig2 <- plotly::layout(fig2,title = paste("Prediction of",ifelse(test_conf_death,"New Cases","Deaths"),"- ",x$location),
+        fig2 <- plotly::layout(fig2,title = paste("Prediction of Cumulative",ifelse(test_conf_death,"Cases","Deaths"),"- ",x$location),
                                xaxis = list(title = "",
                                             tickangle = -90,
                                             ## Add pred dates to the x axis
                                             dtick = 14*86400000,
                                             tickformat = dt_format),
-                               yaxis = list(title = paste0("Cumulative ",ifelse(test_conf_death,"New Cases","New Deaths"))),
+                               yaxis = list(title = paste0("Cumulative ",ifelse(test_conf_death,"Cases","Deaths"))),
                                shapes = list(type = "line", opacity = 0.7, line = list(color = "black", width = 1),
                                              y0 = 0, y1 = 1, yref = "paper",
                                              x0 = last_date_n, x1 = last_date_n),

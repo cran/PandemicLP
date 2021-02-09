@@ -1,3 +1,11 @@
+PandemicLP v0.2.1 (Release date: 2021-02-08)
+==============
+
+Changes:
+
+* Fixed a few but important bugs.
+
+
 PandemicLP v0.2.0 (Release date: 2020-11-25)
 ==============
 
@@ -23,3 +31,5 @@ Changes:
 * Changed the argument "terms" to "cases"
 * General improvements
 * A few bugs.
+* Fixed minor bugs
+* Fixed plot titles

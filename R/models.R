@@ -5,7 +5,7 @@
 #' @name models
 #' @section Growth curve for the mean cases:
 #' The count data for number of cases or deaths is modeled according to an epidemiological model of growth.
-#' In particular, the average counts are \eqn{mu(t)} modeled with a generalized logistic curve:
+#' In particular, the average counts are \eqn{\mu(t)} modeled with a generalized logistic curve:
 #' \deqn{\mu(t) = a c f \frac{e^{-c t}}{(b+e^{-c t})^{f+1}}.}
 #' All parameters, that is \eqn{a,b,c} and \eqn{f} are positive.
 #'
@@ -45,7 +45,7 @@
 #' @section Options for the \code{\link{pandemic_model}} function:
 #' Two arguments in the function change the fitted model, as described below:
 #' \itemize{
-#'   \item 'seasonal': By leaving this argument \code{NULL}, the standard model is fitted. By supplying it with a vector
+#'   \item 'seasonal_effect': By leaving this argument \code{NULL}, the standard model is fitted. By supplying it with a vector
 #'   of up to three weekdays, the desired seasonal effects are added to the model.
 #'   \item 'n_waves': By leaving this argument equal to 1, the standard model is fitted. By changing it to
 #'   2 implies a two waves model. Future versions of the package will allow for more waves.}

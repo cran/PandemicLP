@@ -349,12 +349,12 @@ fitmodel=function(Y,case_type,seasonal_effect,n_waves,p, chains, warmup, thin, s
 #' a few useful statistics based on the predictions and
 #' \code{\link{plot.pandemicPredicted}} to plot the predicted values.
 #'
-#' @param Y An object of class \code{\link{pandemicData-objects}} created by function \code{\link{load_covid}} or a list providing the epidemiological data for the model.
+#' @param Y an object of class \code{\link{pandemicData-objects}} created by function \code{\link{load_covid}} or a list providing the epidemiological data for the model.
 #' The elements of this Y list are:
 #'
 #' \describe{
 #'   \item{\code{data}:}{
-#'   A data frame with at least the following columns:
+#'   a data frame with at least the following columns:
 #'
 #'   \describe{
 #'   \item{\code{date}:}{a date vector. It should be of class 'Date' and format 'YYYY-MM-DD'.}
@@ -372,7 +372,7 @@ fitmodel=function(Y,case_type,seasonal_effect,n_waves,p, chains, warmup, thin, s
 #'
 #'   }
 #'
-#'   \item{\code{name}:}{a character string providing the name of Country/State/Location of the epidemiological data.}
+#'   \item{\code{name}:}{a string providing the name of Country/State/Location of the epidemiological data.}
 #'
 #'   \item{\code{population}:}{a positive integer specifying the population size of the
 #'    Country/State/Location selected.}
@@ -382,9 +382,8 @@ fitmodel=function(Y,case_type,seasonal_effect,n_waves,p, chains, warmup, thin, s
 #'   For formatting epidemiological data (not provided by the \code{load_covid} function) in the specified Y list format, see the \strong{Examples} section in
 #'    \code{\link{covid19BH}}.
 #'
-#' @param case_type character string providing the type of cases of interest in modeling the epidemic.
-#' Current options are \code{"confirmed"} for confirmed cases or \code{"deaths"} for deaths.
-#' The default is \code{"confirmed"}.
+#' @param case_type a string providing the type of cases of interest in modelling the epidemic. 
+#'Current options are \code{"confirmed"} for confirmed cases or \code{"deaths"} for deaths. The default is \code{"confirmed"}.
 #'
 #' @param seasonal_effect string vector indicating the days of the week in which seasonal effect was observed.
 #' The vector can contain the full weekday name (sunday to saturday) or the first 3 letters,
@@ -393,22 +392,22 @@ fitmodel=function(Y,case_type,seasonal_effect,n_waves,p, chains, warmup, thin, s
 #' @param n_waves integer 1 or 2. This argument indicates the number of waves to be adjusted by mean curve.
 #' The default is 1. For details go to \code{\link{models}}.
 #'
-#' @param p a numerical value greater than 0 and less than or equal to 1. It's a percentage.
-#' The maximum cumulative total number of cases for the end of the epidemic in a location should be
-#' p percent of its population. The default is \code{p = 0.08}. This is a model restriction.
+#' @param p a numerical value greater than 0 and less than or equal to 1. It is 
+#'the percentage of the maximum cumulative total number of cases until the end of the
+#'epidemic in relation to the population of the location. The default is \code{p = 0.08}. This is a model restriction.
 #' See more on the \code{\link{models}}.
 #'
-#' @param chains A positive integer specifying the number of Markov chains. The default is \code{1},
+#' @param chains a positive integer specifying the number of Markov chains. The default is \code{1},
 #' which is default value used by the CovidLP app (\url{http://est.ufmg.br/covidlp/home/en/}).
 #'
-#' @param warmup A positive integer specifying the number of warmup (aka burnin) iterations per chain.
+#' @param warmup a positive integer specifying the number of warmup (aka burnin) iterations per chain.
 #' These warmup samples are not used for inference.  The default is \code{2000}.
 #'
-#' @param thin  A positive integer specifying the period for saving samples. The default is \code{3},
+#' @param thin  a positive integer specifying the period for saving samples. The default is \code{3},
 #' which is the default value used by the CovidLP app (\url{http://est.ufmg.br/covidlp/home/en/}).
 #'.
 #'
-#' @param sample_size  A positive integer specifying the posterior sample's size per chain that will be used for inference.
+#' @param sample_size  a positive integer specifying the posterior sample's size per chain that will be used for inference.
 #' The total number of iterations per chain is:
 #'
 #'  \code{warmup} + \code{thin} * \code{sample_size}
@@ -416,12 +415,12 @@ fitmodel=function(Y,case_type,seasonal_effect,n_waves,p, chains, warmup, thin, s
 #'  The default is \code{1000}, which is the default value used by CovidLP app (\url{http://est.ufmg.br/covidlp/home/en/}).
 #'
 #' @param init specification of the initial values of the parameters per chain. The default is \code{"random"}.
-#' See the \strong{Details} section for more info about model parameters.
+#' Go to  \code{\link{models}} for more info about model parameters.
 #' Any parameters whose values are not specified will receive initial values generated as described in
 #' \code{init = "random"}. Specification of the initial values for \code{\link{pandemic_model}} can only be via list.
 #' See the detailed documentation for the init argument via list in \code{\link[rstan]{stan}}.
 #'
-#' @param ... Other arguments passed to the function. These are optional arguments for the \code{\link[rstan]{sampling}}  (\pkg{rstan} package).
+#' @param ... other arguments passed to the function. These are optional arguments for the \code{\link[rstan]{sampling}}  (\pkg{rstan} package).
 #' Additional arguments can be \code{control}, \code{cores}, etc...
 #'
 #' @param covidLPconfig \code{TRUE} or \code{FALSE}: flag indicating whether to use default
