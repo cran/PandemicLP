@@ -1,8 +1,8 @@
 Package: PandemicLP
 Type: Package
 Title: Long Term Prediction for Epidemic and Pandemic Data
-Version: 0.2.1
-Date: 2021-05-08
+Version: 1.1.0
+Date: 2021-09-03
 Authors@R: c(person("Débora", "de Freitas Magalhães", email = "deborafmag@gmail.com", role = "aut"),
             person("Marta Cristina", "Colozza Bianchi da Costa", email = "marta_bianchi@ufg.br", role = "aut"),
             person("Guido", "Alberti Moreira", email = "guidoalber@gmail.com", role = c("cre","aut"),comment=c(ORCID="0000-0001-7557-0874")),
@@ -22,7 +22,7 @@ LazyData: true
 Biarch: true
 Depends: R (>= 3.5.0), rstan (>= 2.18.1), rstantools (>= 2.1.1), stats
 Imports: utils, methods, Rcpp (>= 0.12.0), plotly (>= 4.9.2.1), dplyr
-        (>= 1.0.1), curl (>= 4.3), tidyr (>= 1.1.1)
+        (>= 1.0.1), curl (>= 4.3), tidyr (>= 1.1.1), covid19br
 LinkingTo: BH (>= 1.66.0), Rcpp (>= 0.12.0), RcppEigen (>= 0.3.3.3.0),
         RcppParallel (>= 5.0.1), rstan (>= 2.18.1), StanHeaders (>=
         2.18.0)
@@ -32,7 +32,7 @@ VignetteBuilder: knitr
 SystemRequirements: GNU make
 RoxygenNote: 7.1.1
 NeedsCompilation: yes
-Packaged: 2021-02-08 23:26:19 UTC; anthorg
+Packaged: 2021-09-12 11:17:24 UTC; anthorg
 Author: Débora de Freitas Magalhães [aut],
   Marta Cristina Colozza Bianchi da Costa [aut],
   Guido Alberti Moreira [cre, aut]
@@ -40,4 +40,4 @@ Author: Débora de Freitas Magalhães [aut],
   Thais Pacheco Menezes [aut],
   Marcos Oliveira Prates [ctb] (<https://orcid.org/0000-0001-8077-4898>)
 Repository: CRAN
-Date/Publication: 2021-02-09 13:00:02 UTC
+Date/Publication: 2021-09-14 16:40:14 UTC

@@ -4,10 +4,14 @@
 \alias{traceplot,pandemicEstimated-method}
 \title{Draw traceplot of the parameters for the pandemic model}
 \usage{
-\S4method{traceplot}{pandemicEstimated}(object, ...)
+\S4method{traceplot}{pandemicEstimated}(object, waves = 1:object$n_waves, ...)
 }
 \arguments{
 \item{object}{Output of the \code{\link{pandemic_model}} function}
+
+\item{waves}{If the estimated model has more than 1 wave, this
+parameter controls which waves parameters are shown. Default are all
+waves.}
 
 \item{...}{Aditional parameters passed on to the \code{\link[rstan]{traceplot}} function}
 }

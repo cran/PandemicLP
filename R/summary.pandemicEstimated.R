@@ -72,7 +72,7 @@
 #' @export
 summary.pandemicEstimated=function(object,probs=c(0.025,0.5,0.975),digits=3,info=TRUE,...){
 
-  if(class(digits)!= "numeric" | class(info)!= "logical"){
+  if(!is.numeric(digits) | !is.logical(info)){
     stop("error in 'digits' or 'info'. View ?summary.pandemicEstimated")
   }
 
@@ -89,6 +89,7 @@ summary.pandemicEstimated=function(object,probs=c(0.025,0.5,0.975),digits=3,info
     tab.parameters=tab,
   tab.fitted_values=tab1,
   cases.type=object$cases.type,
+  family=object$family,
   seasonal_effect=object$seasonal_effect,
   n_waves=object$n_waves,
   location=object$Y$name,
@@ -101,7 +102,9 @@ summary.pandemicEstimated=function(object,probs=c(0.025,0.5,0.975),digits=3,info
   thin=object$config.inputs$use_inputs$thin,
   sample_size=object$config.inputs$use_inputs$sample_size,
   number_chains=object$config.inputs$use_inputs$number_chains,
-  p=object$config.inputs$use_inputs$p
+  p=object$config.inputs$use_inputs$p,
+  phiTrunc=object$config.inputs$use_inputs$phiTrunc,
+  fTrunc=object$config.inputs$use_inputs$fTrunc
   )
 
   class(out)="summary.pandemicEstimated"
